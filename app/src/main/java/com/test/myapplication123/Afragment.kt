@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
 class Afragment : Fragment() {
     private lateinit var navController: NavController
-    private lateinit var btna : Button
+    private lateinit var btn_s : ImageButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,9 +26,9 @@ class Afragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        btna = view.findViewById(R.id.btn_a)
+        btn_s = view.findViewById(R.id.btn_s)
 
-        btna.setOnClickListener {
+        btn_s.setOnClickListener {
             navController.navigate(R.id.action_afragment_to_bfragment)
         }
     }
